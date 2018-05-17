@@ -2,8 +2,48 @@
   "name": "ink-figlet",
   "version": "1.0.0",
   "description": "Figlet for Ink",
-  "main": "index.js",
+  "main": "dist.js",
   "repository": "https://github.com/KimotoYanke/ink-figlet",
   "author": "KimotoYanke",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "babel index.js -o dist.js",
+    "prepublish": "npm run build",
+    "pretest": "npm run build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "figlet": "^1.2.0",
+    "ink": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^22.4.3",
+    "lodash.trimend": "^4.5.1",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
+  }
 }
