@@ -1,0 +1,9 @@
+{
+  "name": "ink-figlet",
+  "version": "1.0.0",
+  "description": "Figlet for Ink",
+  "main": "index.js",
+  "repository": "https://github.com/KimotoYanke/ink-figlet",
+  "author": "KimotoYanke",
+  "license": "MIT"
+}
